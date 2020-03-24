@@ -69,11 +69,14 @@ nav {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 0;
 }
 
-.nav-brand {
-  max-width: 15rem;
-  height: auto;
+.nav-brand a {
+  color: var(--text-primary);
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 500;
 }
 
 .menu-icons i {
@@ -231,26 +234,31 @@ section.about::before {
   position: relative;
   z-index: 5;
   background: white;
+  border-radius: 0.6rem;
   /* display: none; */
 }
 
+.card-body {
+  color: black;
+}
+
 .card-profile {
+  float: left;
+  position: relative;
+  border-radius: 50%;
   width: 10rem;
   height: 10rem;
-  border-radius: 50%;
+  background: linear-gradient(-135deg, var(--bg), #222);
   overflow: hidden;
-  position: relative;
-  float: left;
-  background: var(--bg);
-  margin-right: 1.5rem;
+  margin-right: 2rem;
 }
 
 .card-profile img {
   position: absolute;
-  top: -2rem;
-  left: 0.75rem;
-  -webkit-filter: drop-shadow(0rem 0rem 0.7rem black);
-  filter: drop-shadow(0rem 0rem 0.7rem black);
+  top: -1.7rem;
+  left: 0.5rem;
+  width: 100%;
+  height: auto;
 }
 
 .about-text {
@@ -283,6 +291,8 @@ section.about::before {
   background: var(--tertiary);
 }
 
+/* Contact Form */
+
 .contact {
   position: relative;
   background: var(--bg);
@@ -313,12 +323,14 @@ input[type="email"],
 textarea {
   background: transparent;
   border: 1px var(--primary) solid;
+  /* border: none; */
   padding: 1rem 1rem;
   color: rgba(255, 255, 255, 0.6);
   width: 60%;
   max-width: 480px;
   margin-bottom: 3rem;
 }
+
 textarea {
   font-family: "Roboto", sans-serif;
   position: relative;
@@ -335,13 +347,15 @@ input[type="submit"] {
   background: transparent;
 }
 
+/* Neon Button */
+
 .neon-btn {
   position: relative;
   display: inline-block;
-  padding: 1.5rem 3rem;
+  padding: 1rem 2rem;
   color: var(--primary);
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
-  letter-spacing: 0.4rem;
   text-decoration: none;
   font-size: 1.8rem;
   overflow: hidden;
@@ -351,8 +365,8 @@ input[type="submit"] {
 .neon-btn:hover {
   color: var(--bg-secondary);
   background: var(--primary);
-  box-shadow: 0 0 1rem var(--primary), 0 0 4rem var(--primary),
-    0 0 8rem var(--primary);
+  box-shadow: 0 0 1rem var(--primary), 0 0 2rem var(--primary),
+    0 0 3rem var(--primary);
   transition-delay: 1100ms;
 }
 
@@ -431,7 +445,7 @@ input[type="submit"] {
 .bar {
   height: 0.6rem;
   width: 200%;
-  background: var(--tertiary);
+  background: var(--primary);
   filter: brightness(75%);
   margin-bottom: 1rem;
   border-top-right-radius: 0.3rem;

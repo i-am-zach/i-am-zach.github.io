@@ -64,25 +64,49 @@ anime({
   scale: [1, 0.8, 1]
 });
 
-function animateBars() {
-  let interval = Math.floor((Math.random()*6)+5);
-  // interval = Math.floor(Math.random()*2) == 0 ? interval : -interval;
-  const tl = anime.timeline()
-  tl.add({
-    targets: '.bar',
-    translateX: [0, anime.stagger([`${interval}%`, `${interval*0.4}%`], {from: 'center'})],
-    easing: "easeOutElastic(2, .5)",
-    delay: anime.stagger(60),
-    duration: 800,
-  })
-  .add({
-    targets: '.bar',
-    translateX: [anime.stagger([`${interval}%`, `${interval*0.4}%`], {from: 'center'}), 0],
-    easing: "easeOutElastic(2, .5)",
-    delay: anime.stagger(60, {direction: 'reverse'}),
-    duration: 800,
-  })
-  tl.complete = animateBars;
-}
+let shadowObj = {
+  prop1: 0.4
+};
 
-animateBars();
+// Neon Glowing for Contact Page
+const glowElems = document.querySelectorAll(".glow");
+anime({
+  targets: shadowObj,
+  loop: true,
+  direction: "alternate",
+  prop1: 0.8,
+  easing: "easeOutQuad",
+  duration: 1000,
+  update: () => {
+    glowElems.forEach(elem => {
+      if (elem.classList.contains("contact-text")) {
+        elem.style.textShadow = `0 0 ${shadowObj.prop1*1.2}rem var(--primary)`;
+      } else {
+        elem.style.boxShadow = `0 0 ${shadowObj.prop1}rem var(--primary)`;
+      }
+    });
+  }
+});
+
+// function animateBars() {
+//   let interval = Math.floor((Math.random()*6)+5);
+// interval = Math.floor(Math.random()*2) == 0 ? interval : -interval;
+//   const tl = anime.timeline()
+//   tl.add({
+//     targets: '.bar',
+//     translateX: [0, anime.stagger([`${interval}%`, `${interval*0.4}%`], {from: 'center'})],
+//     easing: "easeOutElastic(2, .5)",
+//     delay: anime.stagger(60),
+//     duration: 800,
+//   })
+//   .add({
+//     targets: '.bar',
+//     translateX: [anime.stagger([`${interval}%`, `${interval*0.4}%`], {from: 'center'}), 0],
+//     easing: "easeOutElastic(2, .5)",
+//     delay: anime.stagger(60, {direction: 'reverse'}),
+//     duration: 800,
+//   })
+//   tl.complete = animateBars;
+// }
+
+// animateBars();
