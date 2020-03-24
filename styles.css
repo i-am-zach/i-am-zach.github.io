@@ -249,8 +249,8 @@ section.about::before {
   position: absolute;
   top: -2rem;
   left: 0.75rem;
-  -webkit-filter: drop-shadow(0rem 0rem 0.7rem var(--tertiary));
-  filter: drop-shadow(0rem 0rem 0.7rem var(--tertiary));
+  -webkit-filter: drop-shadow(0rem 0rem 0.7rem black);
+  filter: drop-shadow(0rem 0rem 0.7rem black);
 }
 
 .about-text {
@@ -321,6 +321,8 @@ textarea {
 }
 textarea {
   font-family: "Roboto", sans-serif;
+  position: relative;
+  z-index: 5;
 }
 
 input[type="submit"] {
@@ -416,4 +418,23 @@ input[type="submit"] {
 
 .neon-btn:hover span:nth-child(4) {
   bottom: 100%;
+}
+
+.bars {
+  position: absolute;
+  left: calc(-200% + 10%);
+  width: 100%;
+  bottom: 12rem;
+  height: 6rem;
+}
+
+.bar {
+  height: 0.6rem;
+  width: 200%;
+  background: var(--tertiary);
+  filter: brightness(75%);
+  margin-bottom: 1rem;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  z-index: -1;
 }
