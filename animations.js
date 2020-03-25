@@ -179,8 +179,8 @@ const contactAnimation = anime({
 
 function handleScroll() {
   const scrollY = window.scrollY;
-  const skillsTop = document.querySelector("section.skills").clientHeight;
-  const contactTop = document.querySelector("section.contact").clientHeight;
+  const skillsTop = document.querySelector("section.skills .skill-text").getBoundingClientRect().y - 100;
+  const contactTop = document.querySelector("section.contact .contact-text").getBoundingClientRect().y + 100;
 
   if(scrollY > skillsTop) {
     if(!skilltl.began) {
@@ -190,7 +190,7 @@ function handleScroll() {
     skilltl.reset();
   }
 
-  if(scrollY > contactTop) {
+  if(scrollY >  contactTop) {
     if(!contactAnimation.began) {
       contactAnimation.play();
     }

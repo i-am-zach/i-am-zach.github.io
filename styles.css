@@ -44,6 +44,7 @@ img {
 section {
   padding: 5rem 0;
   position: relative;
+  overflow: hidden;
 }
 
 .lead-text {
@@ -149,15 +150,18 @@ section.about {
   margin-bottom: 10rem;
 }
 
-section.about::before {
-  content: "";
-  position: absolute;
-  bottom: calc(-10rem - 49px);
+.reverse-wave-wrapper {
+  height: 49px;
+  width: 100vw;
+  position: relative;
+  background: var(--bg-secondary);
+}
+
+.reverse-wave-wrapper .reverse-wave {
   width: 100%;
-  height: 4.9rem;
+  height: 100%;
   background: url("./images/wave-small-reversed.png") center no-repeat;
   background-size: cover;
-  z-index: 20;
 }
 
 .card {
