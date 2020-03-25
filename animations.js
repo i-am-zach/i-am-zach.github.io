@@ -200,6 +200,17 @@ const contactAnimation = anime({
   duration: 800
 });
 
+// Animate projects sectoins
+const projectAnimation = anime({
+  targets: ["section.projects .container", ".projects-text"],
+  autoplay: false,
+  opacity: { value: [0, 1], easing: "linear", duration: 1200 },
+  translateX: ["-100%", 0],
+  easing: "easeOutQuad",
+  duration: 800,
+})
+
+
 function handleScroll() {
   const scrollY = window.scrollY;
   const skillsTop =
@@ -208,6 +219,11 @@ function handleScroll() {
   const contactTop =
     document
       .querySelector("section.contact .contact-text")
+      .getBoundingClientRect().y - 100;
+    
+  const projectTop = 
+  document
+      .querySelector(".projects-text")
       .getBoundingClientRect().y - 100;
 
   if (scrollY > skillsTop) {
@@ -218,7 +234,7 @@ function handleScroll() {
     skilltl.reset();
   }
 
-  if (scrollY > contactTop + 600) {
+  if (scrollY > contactTop + 1000) {
     if (!contactAnimation.began) {
       contactAnimation.play();
     }
@@ -232,6 +248,14 @@ function handleScroll() {
     if (!aboutAnimation.began) {
       aboutAnimation.play();
     }
+  }
+
+  if (scrollY > projectTop + 600) {
+    if (!projectAnimation.began) {
+      projectAnimation.play();
+    }
+  } else {
+    projectAnimation.reset();
   }
 }
 

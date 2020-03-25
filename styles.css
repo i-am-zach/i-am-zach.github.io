@@ -50,7 +50,9 @@ section {
 .lead-text {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 2rem;
+  right: 2rem;
+  text-align: left;
   text-transform: uppercase;
   font-weight: 800;
   color: rgba(0, 0, 0, 0.3);
@@ -64,9 +66,37 @@ section {
   padding: 0 1.5rem;
 }
 
+.wave-wrapper {
+  height: 12rem;
+  width: 100vw;
+  position: relative;
+  background: var(--bg-secondary);
+}
+
+.wave-wrapper .wave {
+  width: 100%;
+  height: 100%;
+  background: url("./images/wave-large.png") center no-repeat;
+  background-size: cover;
+}
+
+.reverse-wave-wrapper {
+  height: 10rem;
+  width: 100vw;
+  position: relative;
+  background: var(--bg-secondary);
+}
+
+.reverse-wave-wrapper .reverse-wave {
+  width: 100%;
+  height: 100%;
+  background: url("./images/wave-large-reversed.png") center no-repeat;
+  background-size: cover;
+}
+
 @media only screen and (min-width: 1050px) {
   .container {
-    max-width: 80%;
+    max-width: 90%;
   }
 
   .lead-text {
@@ -235,20 +265,6 @@ section.about {
   margin-bottom: 10rem;
 }
 
-.reverse-wave-wrapper {
-  height: 10rem;
-  width: 100vw;
-  position: relative;
-  background: var(--bg-secondary);
-}
-
-.reverse-wave-wrapper .reverse-wave {
-  width: 100%;
-  height: 100%;
-  background: url("./images/wave-large-reversed.png") center no-repeat;
-  background-size: cover;
-}
-
 .card {
   width: 80%;
   margin: 3rem auto;
@@ -352,13 +368,14 @@ section.about {
 
 /* Skills Section */
 section.skills {
-  width: 100%;
+  width: 100vw;
   background: linear-gradient(to bottom, var(--bg-secondary), var(--bg));
+  padding-bottom: 20rem;
 }
 
 .skill-text {
   margin-top: 5rem;
-  right: 0;
+  right: 2rem;
   text-align: right;
 }
 
@@ -479,10 +496,6 @@ section.skills {
 }
 
 @media only screen and (min-width: 1050px) {
-  section.skills {
-    padding-bottom: 2rem;
-  }
-
   .skill-icon.no-icon {
     font-size: 4rem;
     padding-top: 2rem;
@@ -509,26 +522,148 @@ section.skills {
   }
 }
 
+/* Projecgts */
+
+section.projects {
+  width: 100vw;
+  background: linear-gradient(to bottom, var(--bg), #111a29);
+}
+
+.projects-grid {
+  margin-top: 8rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 500px));
+  grid-auto-rows: 1fr;
+  row-gap: 5rem;
+  column-gap: 2rem;
+  justify-content: center;
+}
+
+.project {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.project:nth-last-child(1):nth-child(odd) {
+  grid: span 2;
+}
+
+.project.in-production::before {
+  content: "In Progress";
+  text-transform: uppercase;
+  color: #f6466899;
+  font-size: 5rem;
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background: rgba(100, 100, 100, 0.7);
+  border-radius: 1rem;
+  z-index: 777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project .head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.project .head img {
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  position: relative;
+  z-index: 111;
+  filter: brightness(70%);
+  transition: filter, transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 5px 5px 10px black, -2px 5px 10px black;
+  border-radius: 1rem;
+}
+
+.project .head img:hover {
+  filter: brightness(100%);
+  transform: scale(1.1);
+}
+
+.project .body {
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 0 10%;
+}
+
+/* Card body background */
+.project::after {
+  position: absolute;
+  content: "";
+  top: 7rem;
+  left: 5%;
+  width: 90%;
+  height: calc(100% - 7rem);
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  border-radius: 1rem;
+  box-shadow: 10px 8px 25px black;
+}
+
+.project .title {
+  font-size: 2.5rem;
+  width: 80%;
+  z-index: 111;
+  margin-bottom: 0.7rem;
+}
+
+.project .desc {
+  font-size: 1.6rem;
+  width: 95%;
+  font-weight: lighter;
+  z-index: 111;
+}
+
+.reverse-wave-wrapper.projects-wave {
+  background: var(--bg);
+}
+.wave-wrapper.projects-wave {
+  background: var(--bg);
+}
+
+@media only screen and (max-width: 600px) {
+  .projects-grid {
+    row-gap: 3rem;
+  }
+}
+
 /* Contact Form */
 
 .contact {
   position: relative;
   background: var(--bg);
+  width: 100vw;
 }
 
 .contact-wrapper {
   position: relative;
   padding-top: 20rem;
+  width: 100vw;
 }
 
 .contact-text {
-  position: absolute;
-  top: 10rem;
-  left: 0;
-  text-transform: uppercase;
-  font-weight: 800;
-  color: rgba(0, 0, 0, 0.3);
-  font-size: 9rem;
+  top: 0;
+  right: 2rem;
+  text-align: right;
 }
 
 .contact form {
