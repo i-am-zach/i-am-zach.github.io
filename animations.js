@@ -6,6 +6,7 @@ const secondary = getComputedStyle(document.body).getPropertyValue(
   "--secondary"
 );
 
+// ANIMATE LETTERS ON HOVER
 const wrapText = s => {
   const textWrapper = document.querySelector(s);
   textWrapper.innerHTML = textWrapper.textContent.replace(
@@ -53,6 +54,31 @@ letters.forEach(letterEl => {
   });
 });
 
+//? Animate sexy bread picture
+
+const swingtl = anime.timeline({ autoplay: false });
+const swingObj = {
+  tick: 0
+};
+const comment = document.querySelector(".hero-img-wrapper .comment");
+const herotl = anime.timeline();
+herotl
+  .add({
+    targets: ".hero .main-text h1",
+    translateX: ["-100vw", 0],
+    delay: anime.stagger(750),
+    easing: "easeOutQuad",
+  })
+  .add({
+    targets: [".hero .main-text p", ".hero .contact-btn"],
+    translateX: ["-100vw", 0],
+    easing: "easeOutQuad",
+    opacity: { value: [0, 1], duration: 2000 },
+    duration: 1000
+  })
+  
+// Animate Squares on About Section
+
 anime({
   targets: ".square",
   rotate: 90,
@@ -78,7 +104,11 @@ anime({
   update: () => {
     glowElems.forEach(elem => {
       if (elem.classList.contains("contact-text")) {
-        elem.style.textShadow = `0 0 ${shadowObj.prop1*1.2}rem var(--primary)`;
+        elem.style.textShadow = `0 0 ${shadowObj.prop1 *
+          1.2}rem var(--primary)`;
+      } else if (elem.classList.contains("hero-img-wrapper")) {
+        elem.style.filter = `drop-shadow(0 0 ${shadowObj.prop1 *
+          0.8}rem var(--primary))`;
       } else {
         elem.style.boxShadow = `0 0 ${shadowObj.prop1}rem var(--primary)`;
       }
@@ -86,126 +116,123 @@ anime({
   }
 });
 
-
 //? ANIMATE SKILLS
 
-const skilltl = anime.timeline({autoplay: false})
+const skilltl = anime.timeline({ autoplay: false });
 skilltl
-.add({
-  targets: ".skill-text",
-  opacity: [0, 1],
-  easing: "linear",
-  duration: 1000,
-})
-.add({
-  targets: '.skill',
-  translateX: function(el, i, l) {
-    if(el.className.includes('even')){
-      return [1000, 0]
-    } else {
-      return [-1000, 0]
-    }
-  },
-  easing: "easeOutElastic(.3, 3)",
-  delay: anime.stagger(500),
-})
-.add({
-  targets: '.skill .skill-name .skill-trail',
-  scale: [0, 1],
-  duration: 1000,
-})
-.add({
-  targets: ".skill .skill-icon",
-  keyframes: [
-    {scale: 0.75},
-    {scale: 1.5},
-    {scale: 1},
-  ],
-  duration: 500,
-  easing: 'easeOutQuad',
-})
+  .add({
+    targets: ".skill-text",
+    opacity: [0, 1],
+    easing: "linear",
+    duration: 1000
+  })
+  .add({
+    targets: ".skill",
+    translateX: function(el, i, l) {
+      if (el.className.includes("even")) {
+        return ["100vw", 0];
+      } else {
+        return ["-100vw", 0];
+      }
+    },
+    easing: "easeOutElastic(.3, 3)",
+    delay: anime.stagger(500)
+  })
+  .add({
+    targets: ".skill .skill-name .skill-trail",
+    scale: [0, 1],
+    duration: 1000
+  })
+  .add({
+    targets: ".skill .skill-icon",
+    keyframes: [{ scale: 0.75 }, { scale: 1.5 }, { scale: 1 }],
+    duration: 500,
+    easing: "easeOutQuad"
+  });
 
-const skillsSection = document.querySelector("section.skills")
+const skillsSection = document.querySelector("section.skills");
 
-const enterSkillIcon = (skillEl) => {
-  anime.remove(skillEl)
+const enterSkillIcon = skillEl => {
+  anime.remove(skillEl);
   anime({
     targets: [skillEl],
     scale: 1.5,
-    duration: 500,
-  })
-}
+    duration: 500
+  });
+};
 
-const leaveSkillIcon = (skillEl) => {
-  anime.remove(skillEl)
+const leaveSkillIcon = skillEl => {
+  anime.remove(skillEl);
   anime({
     targets: skillEl,
     scale: 1,
-    duration: 500,
-  })
-}
+    duration: 500
+  });
+};
 
-const skillIcons = document.querySelectorAll('.skill-icon')
+const skillIcons = document.querySelectorAll(".skill-icon");
 skillIcons.forEach(skillEl => {
-  skillEl.addEventListener('mouseenter', () => {
+  skillEl.addEventListener("mouseenter", () => {
     enterSkillIcon(skillEl);
-  })
-  skillEl.addEventListener('mouseleave', () => {
+  });
+  skillEl.addEventListener("mouseleave", () => {
     leaveSkillIcon(skillEl);
-  })
-})
-
+  });
+});
 
 // Animate About section
-const aboutAnimation  = anime({
+const aboutAnimation = anime({
   autoplay: false,
   targets: "#about",
-  opacity: {value: [0, 1], easing: 'linear', duration: 1200},
-  translateX: ['-100%', 0],
+  opacity: { value: [0, 1], easing: "linear", duration: 1200 },
+  translateX: ["-100%", 0],
   easing: "easeOutQuad",
-  duration: 800,
-})
+  duration: 800
+});
 
 // Animate contact section
 const contactAnimation = anime({
   targets: "section.contact .contact-wrapper",
   autoplay: false,
-  opacity: {value: [0, 1], easing: 'linear', duration: 1200},
-  translateX: ['100%', 0],
+  opacity: { value: [0, 1], easing: "linear", duration: 1200 },
+  translateX: ["100%", 0],
   easing: "easeOutQuad",
-  duration: 800,
-})
-
+  duration: 800
+});
 
 function handleScroll() {
   const scrollY = window.scrollY;
-  const skillsTop = document.querySelector("section.skills .skill-text").getBoundingClientRect().y - 100;
-  const contactTop = document.querySelector("section.contact .contact-text").getBoundingClientRect().y + 100;
+  const skillsTop =
+    document.querySelector("section.skills .skill-text").getBoundingClientRect()
+      .y - 100;
+  const contactTop =
+    document
+      .querySelector("section.contact .contact-text")
+      .getBoundingClientRect().y - 100;
 
-  if(scrollY > skillsTop) {
-    if(!skilltl.began) {
+  if (scrollY > skillsTop) {
+    if (!skilltl.began) {
       skilltl.play();
     }
   } else {
     skilltl.reset();
   }
 
-  if(scrollY >  contactTop) {
-    if(!contactAnimation.began) {
+  if (scrollY > contactTop + 600) {
+    if (!contactAnimation.began) {
       contactAnimation.play();
     }
   } else {
     contactAnimation.reset();
   }
 
-  if(scrollY <= 5) {
+  if (scrollY <= 5) {
     aboutAnimation.reset();
   } else {
-    if(!aboutAnimation.began) {
+    if (!aboutAnimation.began) {
       aboutAnimation.play();
     }
   }
-  
 }
 
-window.addEventListener("scroll", handleScroll)
+window.addEventListener("scroll", handleScroll);
