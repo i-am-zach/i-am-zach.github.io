@@ -43,17 +43,17 @@ img {
 
 section {
   padding: 5rem 0;
+  position: relative;
 }
 
-/* Header */
-
-header {
-  width: 100%;
-  height: 5rem;
+.lead-text {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 999;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 9rem;
 }
 
 .container {
@@ -61,70 +61,6 @@ header {
   max-width: 95%;
   margin: 0 auto;
   padding: 0 1.5rem;
-}
-
-nav {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 1rem 0;
-}
-
-.nav-brand a {
-  color: var(--text-primary);
-  text-transform: uppercase;
-  font-size: 4rem;
-  font-weight: 500;
-}
-
-.menu-icons i {
-  font-size: 3.5rem;
-  color: var(--text-primary);
-  cursor: pointer;
-}
-
-.close i {
-  color: var(--tertiary);
-}
-
-.close {
-  position: absolute;
-  top: 1rem;
-  left: 1.5rem;
-}
-
-.nav-list {
-  width: 25rem;
-  height: 100vh;
-  background-color: var(--bg-secondary);
-  position: fixed;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 1500;
-  transition: all 650ms ease-in-out;
-
-  /* Renders nav-list for mobile but moves it off screen */
-  right: -26rem;
-}
-
-.nav-list.active {
-  /* Moves nav-list to on the screen */
-  right: 0;
-}
-
-.nav-item {
-  padding: 1.5rem 0;
-}
-
-.nav-link {
-  font-size: 1.6rem;
-  color: var(--text-primary);
-  text-transform: uppercase;
 }
 
 /* Hero */
@@ -291,11 +227,144 @@ section.about::before {
   background: var(--tertiary);
 }
 
+/* Skills Section */
+section.skills {
+  height: 60vh;
+  width: 100%;
+  background: linear-gradient(to bottom, var(--bg-secondary), var(--bg));
+}
+
+.skill-text {
+  margin-top: 5rem;
+  right: 0;
+  text-align: right;
+}
+
+.skill {
+  margin: 5rem 0;
+}
+
+.skill:first-child {
+  margin-top: 10rem;
+}
+
+.skill:nth-child(odd) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.skill:nth-child(even) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.skill-name {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--secondary);
+  position: relative;
+  display: inline-block;
+}
+
+.skill:nth-child(odd) .skill-name {
+  margin-right: 3rem;
+  text-align: right;
+}
+
+.skill:nth-child(even) .skill-name {
+  margin-left: 3rem;
+}
+
+.skill-trail {
+  width: 2.5px;
+  background: var(--secondary);
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 120%;
+}
+
+.skill:nth-child(odd) .skill-trail {
+  right: -3rem;
+}
+
+.skill:nth-child(even) .skill-trail {
+  left: -3rem;
+}
+
+.skill-icons {
+  display: flex;
+  flex-direction: row;
+}
+
+.skill:nth-child(odd) .skill-icon {
+  margin-left: 2rem;
+}
+.skill:nth-child(odd) .skill-icon:first-child {
+  margin-left: 3rem;
+}
+
+.skill:nth-child(even) .skill-icon {
+  margin-right: 2rem;
+}
+
+.skill:nth-child(even) .skill-icon:first-child {
+  margin-right: 3rem;
+}
+
+.skill-icon {
+  height: 4rem;
+  width: auto;
+  position: relative;
+}
+
+.skill-icon .cover {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  border-radius: 10%;
+  width: 100%;
+  height: 100%;
+  background: var(--secondary);
+}
+
+.skill-icon i {
+  color: var(--secondary);
+  font-size: 4rem;
+}
+
+.skill-icon img {
+  fill: #fe9677;
+  min-width: 4rem;
+  width: 4rem;
+  height: auto;
+}
+
+.skill-icon {
+  font-size: 3rem;
+  color: var(--secondary);
+}
+
+.skill-icon.no-icon {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
 /* Contact Form */
 
 .contact {
   position: relative;
   background: var(--bg);
+}
+
+.contact-wrapper {
+  position: relative;
   padding-top: 20rem;
 }
 
