@@ -67,7 +67,7 @@ herotl
     targets: ".hero .main-text h1",
     translateX: ["-100vw", 0],
     delay: anime.stagger(750),
-    easing: "easeOutQuad",
+    easing: "easeOutQuad"
   })
   .add({
     targets: [".hero .main-text p", ".hero .contact-btn"],
@@ -75,8 +75,8 @@ herotl
     easing: "easeOutQuad",
     opacity: { value: [0, 1], duration: 2000 },
     duration: 1000
-  })
-  
+  });
+
 // Animate Squares on About Section
 
 anime({
@@ -200,47 +200,79 @@ const contactAnimation = anime({
   duration: 800
 });
 
-// Animate projects sectoins
+// Animate projects section
 const projectAnimation = anime({
   targets: ["section.projects .container", ".projects-text"],
   autoplay: false,
   opacity: { value: [0, 1], easing: "linear", duration: 1200 },
   translateX: ["-100%", 0],
   easing: "easeOutQuad",
-  duration: 800,
-})
+  duration: 800
+});
 
+// Animate awards section
+const awardsAnimation = anime({
+  targets: "section.awards .img-container",
+  autoplay: false,
+  delay: anime.stagger(700),
+  opacity: { value: [0, 1], easing: "linear", duration: 1200 },
+  translateX: function(el, i, total) {
+    if (i % 2 == 0) {
+      return ["-100vw", 0];
+    } else {
+      return ["100vw", 0];
+    }
+  },
+  easing: "easeOutExpo"
+});
 
 function handleScroll() {
   const scrollY = window.scrollY;
-  const skillsTop =
-    document.querySelector("section.skills .skill-text").getBoundingClientRect()
-      .y - 100;
-  const contactTop =
-    document
-      .querySelector("section.contact .contact-text")
-      .getBoundingClientRect().y - 100;
-    
-  const projectTop = 
-  document
-      .querySelector(".projects-text")
-      .getBoundingClientRect().y - 100;
+  const skillsPos = document
+    .querySelector("section.skills .skill-text")
+    .getBoundingClientRect();
+  const contactPos = document
+    .querySelector("section.contact .contact-text")
+    .getBoundingClientRect();
 
-  if (scrollY > skillsTop) {
-    if (!skilltl.began) {
-      skilltl.play();
-    }
-  } else {
-    skilltl.reset();
-  }
+  const projectPos = document
+    .querySelector(".projects-text")
+    .getBoundingClientRect();
 
-  if (scrollY > contactTop + 1000) {
-    if (!contactAnimation.began) {
-      contactAnimation.play();
+  const awardPos = document
+    .querySelector(".awards-text")
+    .getBoundingClientRect();
+
+  const observations = [
+    {
+      position: skillsPos,
+      animation: skilltl
+    },
+    {
+      position: contactPos,
+      animation: contactAnimation
+    },
+    {
+      position: awardPos,
+      animation: awardsAnimation
+    },
+    {
+      position: projectPos,
+      animation: projectAnimation
     }
-  } else {
-    contactAnimation.reset();
-  }
+  ];
+
+  observations.forEach(observation => {
+    const {position, animation} = observation;
+    if(position.top < window.innerHeight) {
+      // Partially visible
+      if(!animation.began) {
+        animation.play();
+      }
+    } else {
+      animation.reset();
+    } 
+  })
 
   if (scrollY <= 5) {
     aboutAnimation.reset();
@@ -248,14 +280,6 @@ function handleScroll() {
     if (!aboutAnimation.began) {
       aboutAnimation.play();
     }
-  }
-
-  if (scrollY > projectTop + 600) {
-    if (!projectAnimation.began) {
-      projectAnimation.play();
-    }
-  } else {
-    projectAnimation.reset();
   }
 }
 

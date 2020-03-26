@@ -670,7 +670,102 @@ section.projects {
   }
 }
 
-/* Contact Form */
+/* Awards */
+section.awards {
+  padding: 0;
+  padding-top: 15rem;
+  background: #111a29;
+}
+
+.lead-text.awards-text {
+  text-align: right;
+}
+
+.awards-block {
+  border-radius: none;
+  overflow: hidden;
+}
+.wave-wrapper.award-wave {
+  background: #111a29;
+}
+
+.reverse-wave-wrapper.award-wave {
+  background: var(--bg);
+}
+
+.award-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.bg-award {
+  position: relative;
+  padding: 1.5rem 0;
+}
+
+.bg-award::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.award-container div {
+  text-align: left;
+  margin: auto;
+  position: relative;
+  z-index: 5;
+  color: white;
+  opacity: 0.8;
+  font-size: 3rem;
+  font-weight: lighter;
+}
+
+.bg-award.comp-sci {
+  background: url("./images/programming.jpg") center no-repeat;
+  background-size: 100% auto;
+}
+
+.bg-award.mun {
+  background: url("./images/united_nations.jpg") center no-repeat;
+  background-size: 100% auto;
+}
+
+.bg-award.vb {
+  background: url("./images/ucla_vb.jpg") center no-repeat;
+  background-size: 100% auto;
+}
+
+.bg-award.di {
+  background: url("./images/di_globals.jpg") center no-repeat;
+  background-size: 100% auto;
+}
+
+.award-container div {
+  margin: 2rem 10%;
+}
+
+.award-container .award {
+  max-width: 60%;
+}
+
+.award-container div i {
+  float: left;
+  margin-right: 1.8rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .award-container .award {
+    max-width: none;
+  }
+}
+/* Contact Form*/
 
 .contact {
   position: relative;
@@ -682,12 +777,6 @@ section.projects {
   position: relative;
   padding-top: 20rem;
   width: 100vw;
-}
-
-.contact-text {
-  top: 0;
-  right: 2rem;
-  text-align: right;
 }
 
 .contact form {
