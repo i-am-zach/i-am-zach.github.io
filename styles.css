@@ -98,9 +98,11 @@ section {
   .container {
     max-width: 90%;
   }
+}
 
+@media only screen and (max-width: 600px) {
   .lead-text {
-    margin: 0 2rem;
+    font-size: 6rem !important;
   }
 }
 
@@ -520,6 +522,27 @@ section.skills {
   .skill-text {
     top: -3rem;
   }
+
+  .skill-name {
+    font-size: 1.8rem;
+  }
+
+  .skill-icon i {
+    font-size: 3rem;
+  }
+
+  .skill-icons {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    row-gap: 1rem;
+  }
+
+  section.skills {
+    padding-bottom: 5rem;
+  }
 }
 
 /* Projecgts */
@@ -552,6 +575,7 @@ section.projects {
 .project.in-production::before {
   content: "In Progress";
   text-transform: uppercase;
+  text-align: center;
   color: #f6466899;
   font-size: 5rem;
   font-weight: 900;
@@ -811,7 +835,15 @@ input[type="submit"] {
 }
 
 @media only screen and (max-width: 600px) {
-  .contact-text {
-    font-size: 8rem;
+  .contact-wrapper {
+    padding: 8rem 0;
+  }
+
+  section.contact {
+    padding-bottom: 0;
+  }
+
+  .contact-wrapper {
+    padding-bottom: 4rem;
   }
 }
