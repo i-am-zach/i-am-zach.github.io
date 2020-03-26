@@ -298,7 +298,7 @@ section.about {
 
 .card-profile img {
   position: absolute;
-  top: 0rem;
+  top: -0.8rem;
   left: 1rem;
   width: 80%;
   height: auto;
