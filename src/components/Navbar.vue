@@ -1,7 +1,7 @@
 <template>
-  <nav id="nav" class="flex flex-col items-center text-center sm:flex-row sm:items-center sm:justify-between container pt-3">
+  <nav id="nav" class="sized flex flex-col items-center text-center sm:flex-row sm:items-center sm:justify-between pt-3">
     <div class="relative w-screen flex justify-center sm:w-max sm:block">
-      <router-link to="/"><img src="@/assets/Logo.svg" /></router-link>
+      <img src="@/assets/Logo.svg" />
       <div v-if="$mq === 'sm'" class="hamburger" role="button" @click="showMobile = !showMobile">
           <div></div>
           <div></div>
@@ -9,9 +9,9 @@
       </div>
     </div>
     <div v-if="$mq !== 'sm' || showMobile" class="nav-menu flex flex-col gap-2 mt-3 sm:block sm:gap-0 sm:mt-0">
-      <router-link class="nav-link" to="/">Home</router-link>
       <a class="nav-link" href="/#about-me">About Me</a>
-      <router-link class="nav-link" to="/projects">Projects</router-link>
+      <a class="nav-link" href="https://www.linkedin.com/in/zach-lefkovitz-714a0418b/" target="_blank">LinkedIn</a>
+      <a class="nav-link" href="https://dev.to/iamzach" target="_blank">DevTo</a>
     </div>
   </nav>
 </template>
