@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/Navbar";
+import yearbookPhoto from "./images/yearbook.png";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <section className="container hero">
+        <div className="hero-layout">
+          <div className="picture">
+            <img src={yearbookPhoto} alt="Me!"></img>
+          </div>
+          <div className="text-content">
+            <h1>
+              Hey there 👋
+              <br />
+              I’m Zach
+            </h1>
+            <h3>
+              I’m a student who makes interactive websites and I’m learning how
+              to hack.
+            </h3>
+            <span className="button-container">
+              <a href={`${process.env.PUBLIC_URL}/assets/Resume.pdf`} className="button">
+                View my resume
+              </a>
+              <span className="outline"></span>
+            </span>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

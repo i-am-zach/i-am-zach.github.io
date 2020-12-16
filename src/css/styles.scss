@@ -1,0 +1,91 @@
+@import "./variables";
+
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+
+// BASE STYLES
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: $mx-width;
+  margin: 0 auto;
+}
+
+// Utilities
+.relative {
+  position: relative;
+}
+
+// HERO SECTION
+.hero {
+  h1 {
+    font-size: 92px;
+  }
+
+  h3 {
+    margin-top: 2rem;
+    font-size: 44px;
+    font-weight: normal;
+    color: $text-secondary;
+  }
+
+  .button-container {
+    margin-top: 3rem;
+    position: relative;
+    display: inline-block;
+
+    .button {
+      position: relative;
+      z-index: 10;
+      display: inline-block;
+      color: $text-inverted;
+      background: $black;
+      font-size: 26px;
+      padding: 1rem 5rem;
+    }
+
+    .outline {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      border: 1.5px solid $text-secondary;
+    }
+  }
+
+  .hero-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: "text picture";
+
+    .text-content {
+        grid-area: text;
+    }
+
+    .picture {
+        grid-area: picture;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        img {
+            width: 100%;
+            max-width: 360px;
+        }
+    }
+  }
+}
