@@ -22,6 +22,7 @@ a {
 .container {
   max-width: $mx-width;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 // Utilities
@@ -53,7 +54,7 @@ a {
       display: inline-block;
       color: $text-inverted;
       background: $black;
-      font-size: 26px;
+      font-size: 32px;
       padding: 1rem 5rem;
     }
 
@@ -66,26 +67,91 @@ a {
       border: 1.5px solid $text-secondary;
     }
   }
+}
 
+.hero-layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: "text picture";
+
+  .text-content {
+    grid-area: text;
+  }
+
+  .picture {
+    grid-area: picture;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: 1rem;
+    img {
+      width: 100%;
+      max-width: 360px;
+    }
+  }
+}
+
+// Desktop query
+@media (max-width: $breakpoint-desktop) {
   .hero-layout {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 60% 40%;
-    grid-template-areas: "text picture";
+    margin-top: 2rem;
+    h1 {
+      font-size: 70px;
+    }
+
+    h3 {
+      font-size: 32px;
+    }
+  }
+
+  .hero {
+    .button-container {
+      .button {
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+
+// Tablet query
+@media (max-width: $breakpoint-tablet) {
+  .hero {
+    .button-container {
+      .button {
+        font-size: 22px;
+        padding: 1rem 4.5rem;
+      }
+    }
+  }
+  .hero-layout {
+    grid-template-columns: 100%;
+    grid-template-areas: "picture" "text";
+
+    h1 {
+      margin-top: 2rem;
+      font-size: 48px;
+    }
+
+    h3 {
+      margin-top: 1rem;
+      font-size: 28px;
+    }
 
     .text-content {
-        grid-area: text;
+      text-align: center;
     }
 
     .picture {
-        grid-area: picture;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        img {
-            width: 100%;
-            max-width: 360px;
-        }
+      margin-top: 2rem;
+      justify-content: center;
+      img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      }
     }
   }
 }

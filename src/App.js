@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <section className="container hero">
+      <section className="container hero" style={{ marginTop: "1rem" }}>
         <div className="hero-layout">
           <div className="picture">
             <img src={yearbookPhoto} alt="Me!"></img>
