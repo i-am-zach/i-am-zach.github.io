@@ -1,45 +1,44 @@
 {
-  "name": "gh-pages",
-  "version": "0.1.0",
+  "name": "gatsby-starter-hello-world",
   "private": true,
-  "homepage": "https://i-am-zach.github.io/",
+  "description": "A simplified bare-bones starter for Gatsby",
+  "version": "0.1.0",
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "predeploy": "gatsby build",
+    "deploy": "gh-pages -b gh-pages -d public",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
   "dependencies": {
+    "@iconify-icons/ant-design": "^1.1.0",
+    "@iconify-icons/bi": "^1.1.0",
     "@iconify-icons/gg": "^1.1.0",
     "@iconify/react": "^1.1.3",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "gh-pages": "^3.1.0",
-    "node-sass": "4.14.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.1",
-    "web-vitals": "^0.2.4"
+    "gatsby": "^2.26.1",
+    "gatsby-image": "^2.8.0",
+    "gatsby-plugin-react-helmet": "^3.7.0",
+    "gatsby-plugin-sharp": "^2.11.1",
+    "gatsby-source-filesystem": "^2.8.0",
+    "gatsby-transformer-remark": "^2.13.0",
+    "gatsby-transformer-sharp": "^2.9.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "predeploy": "react-scripts build",
-    "deploy": "gh-pages -b gh-pages -d build",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "prettier": "2.2.1"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
