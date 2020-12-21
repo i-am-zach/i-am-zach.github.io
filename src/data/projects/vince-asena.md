@@ -7,7 +7,7 @@ tags:
     - Stripe
 title: Vince Asena Ecommerce
 picture: ../../images/vinceasena.png
-url: https://www.gradewarriors.com/
+url: https://www.vinceasena.com/
 githubUrl: null
 order: 2
 ---

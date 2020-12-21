@@ -18,7 +18,7 @@
   --breakpoint-desktop: 1024px;
 
   --background: white;
-  --background-secondary: rgb(240, 240, 240);
+  --background-secondary: #f0f0f0;
 }
 
 * {
