@@ -67,7 +67,7 @@ export const query = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    allMarkdownRemark {
+    allMarkdownRemark(sort: {fields: frontmatter___order}, filter: {fields: {contentType: {eq: "projects"}}}) {
       edges {
         node {
           id
