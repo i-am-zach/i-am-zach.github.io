@@ -17,8 +17,8 @@
   --breakpoint-tablet: 768px;
   --breakpoint-desktop: 1024px;
 
-  --background: white;
-  --background-secondary: #f0f0f0;
+  --background: #f5f5f5;
+  --background-secondary: #ececec;
 }
 
 * {
@@ -58,8 +58,11 @@ ul {
 
 /* HERO SECTION */
 .hero {
-  clip-path: polygon(100% 0%, 100% 88%, 50% 100%, 0% 88%, 0px 0px);
+  clip-path: polygon(100% 0%, 100% 88%, 50% 100%, 0% 88%, 0% 0%);
   padding-bottom: 5rem;
+}
+
+.hero {
   background: var(--background);
 }
 
@@ -131,19 +134,57 @@ ul {
   transform: translate(0.7rem, 0.7rem);
 }
 
-section#projects .lead {
+.lead {
   font-size: 36px;
   text-align: center;
   font-weight: bold;
   margin-top: 2rem;
 }
-section#projects .sublead {
+.sublead {
   text-align: center;
   font-size: 22px;
   color: var(--text-secondary);
   font-weight: normal;
   padding-top: 0.25rem;
   padding-bottom: 2rem;
+}
+
+section#projects {
+  padding-bottom: 1rem;
+}
+
+section#skills {
+  position: relative;
+  background: var(--background);
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+  margin-bottom: 0;
+  clip-path: polygon(100% 0%, 100% 98%, 50% 100%, 0% 98%, 0% 0%);
+  padding-bottom: 5rem;
+}
+
+section#skills::before {
+  position: absolute;
+  content: "";
+  top: -5rem;
+  height: 5rem;
+  width: 100%;
+  background: var(--background);
+  clip-path: polygon(0% 0%, 50% 100%, 100% 0%, 100% 100%, 0% 100%)
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+section#contact {
+  padding-bottom: 2rem;
+}
+
+#linkedin {
+  color: #2867B2;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -188,10 +229,14 @@ section#projects .sublead {
     padding: 1rem 5rem;
   }
 
-  section#projects .lead {
+  .lead {
     font-size: 60px;
   }
-  section#projects .sublead {
+  .sublead {
     font-size: 30px;
+  }
+
+  section#skills {
+    clip-path: polygon(100% 0%, 100% 94%, 50% 100%, 0% 94%, 0% 0%);
   }
 }

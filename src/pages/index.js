@@ -2,9 +2,12 @@ import React from "react"
 import { graphql } from "gatsby"
 import Navbar from "../components/Navbar"
 import Project from "../components/Project"
+import Skill from "../components/Skill"
 import "../styles/styles.css"
 import yearbookPhoto from "../images/yearbook.png"
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet"
+import { Icon, InlineIcon } from "@iconify/react"
+import linkedinRect from "@iconify-icons/brandico/linkedin-rect"
 
 export default function Home({ data }) {
   const projects = data.allMarkdownRemark.edges.map(data => data.node)
@@ -12,7 +15,10 @@ export default function Home({ data }) {
     <div className="App">
       <Helmet>
         <title>Zach Lefkovitz</title>
-        <meta name="description" content="Zach Lefkovitz's portfolio website."></meta>
+        <meta
+          name="description"
+          content="Zach Lefkovitz's portfolio website."
+        ></meta>
       </Helmet>
       <Navbar />
       <section className="hero">
@@ -56,6 +62,29 @@ export default function Home({ data }) {
           ))}
         </div>
       </section>
+      <div className="divider"></div>
+      <section id="skills">
+        <div className="container">
+          <div className="lead">Skills</div>
+          <div className="sublead">What I know</div>
+          <div className="skills">
+            {data.allLanguagesYaml.nodes.map(({ language }) => (
+              <Skill language={language} />
+            ))}
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div className="container">
+          <div className="lead">Like what you see?</div>
+          <div className="sublead">Get in contact with me</div>
+          <div className="socials">
+            <a href="https://www.linkedin.com/in/zach-lefkovitz-714a0418b/">
+              <Icon icon={linkedinRect} width="50" id="linkedin" />
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
@@ -67,7 +96,10 @@ export const query = graphql`
         ...GatsbyImageSharpFluid
       }
     }
-    allMarkdownRemark(sort: {fields: frontmatter___order}, filter: {fields: {contentType: {eq: "projects"}}}) {
+    allMarkdownRemark(
+      sort: { fields: frontmatter___order }
+      filter: { fields: { contentType: { eq: "projects" } } }
+    ) {
       edges {
         node {
           id
@@ -81,6 +113,24 @@ export const query = graphql`
               childImageSharp {
                 fluid(maxWidth: 1280) {
                   ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    allLanguagesYaml(sort: { fields: language___order }) {
+      nodes {
+        language {
+          name
+          skills {
+            name
+            learning
+            image {
+              childImageSharp {
+                fixed(height: 70) {
+                  ...GatsbyImageSharpFixed
                 }
               }
             }

@@ -1,0 +1,17 @@
+language:
+  order: 4
+  name: Other
+  skills:
+    - name: Java + Javax Swing
+      image: ../../images/skills/java.png
+    - name: Rust
+      image: ../../images/skills/rust.png
+      learning: true
+    - name: Blender
+      image: ../../images/skills/blender.png
+      learning: true
+    - name: Affinity Designer
+      image: ../../images/skills/affinity-designer.png
+    - name: Affinity Photo
+      image: ../../images/skills/affinity-photo.png
+      learning: true

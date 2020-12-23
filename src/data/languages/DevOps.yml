@@ -1,0 +1,12 @@
+language:
+  order: 2
+  name: Cloud
+  skills:
+    - name: Docker
+      image: ../../images/skills/docker.png
+    - name: AWS
+      image: ../../images/skills/aws.png
+    - name: Google Cloud
+      image: ../../images/skills/google-cloud.png
+    - name: Heroku
+      image: ../../images/skills/heroku.png

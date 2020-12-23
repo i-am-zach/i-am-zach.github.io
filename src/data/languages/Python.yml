@@ -1,0 +1,13 @@
+language:
+  order: 1
+  name: Python
+  skills:
+    - name: Django
+      image: ../../images/skills/django.png
+    - name: Flask
+      image: ../../images/skills/flask.png
+    - name: Pandas
+      image: ../../images/skills/pandas.png
+    - name: TensorFlow
+      image: ../../images/skills/tensorflow.png
+      learning: true

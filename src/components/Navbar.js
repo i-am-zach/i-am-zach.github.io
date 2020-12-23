@@ -1,6 +1,6 @@
 import React from "react"
 import { InlineIcon } from "@iconify/react"
-import darkMode from "@iconify-icons/gg/dark-mode"
+import linkedinRect from "@iconify-icons/brandico/linkedin-rect"
 import "./navbar.css"
 
 export default function Navbar() {
@@ -14,7 +14,9 @@ export default function Navbar() {
             </div>
           </div>
           <div className="nav-menu">
-            <InlineIcon icon={darkMode} height="40px" />
+            <a href="#contact">
+              <InlineIcon icon={linkedinRect} height="40px" />
+            </a>
           </div>
         </nav>
       </div>
