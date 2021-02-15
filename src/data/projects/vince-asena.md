@@ -9,7 +9,7 @@ title: Vince Asena Ecommerce
 picture: ../../images/vinceasena.png
 url: https://www.vinceasena.com/
 githubUrl: null
-order: 2
+order: 3
 ---
 A full-stack ecommerce website that sells beats. Gatsby and Tailwind on the frontend and Django Rest Framework for a products API on the backend. Deployed to Netlify and AWS.
 

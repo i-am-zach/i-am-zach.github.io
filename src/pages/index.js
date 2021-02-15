@@ -6,7 +6,7 @@ import Skill from "../components/Skill"
 import "../styles/styles.css"
 import yearbookPhoto from "../images/yearbook.png"
 import { Helmet } from "react-helmet"
-import { Icon, InlineIcon } from "@iconify/react"
+import { Icon } from "@iconify/react"
 import linkedinRect from "@iconify-icons/brandico/linkedin-rect"
 
 export default function Home({ data }) {

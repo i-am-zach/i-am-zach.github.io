@@ -8,5 +8,7 @@ language:
       image: ../../images/skills/aws.png
     - name: Google Cloud
       image: ../../images/skills/google-cloud.png
+    - name: Netlify
+      image: ../../images/skills/netlify.png
     - name: Heroku
       image: ../../images/skills/heroku.png

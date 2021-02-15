@@ -13,6 +13,7 @@
     "clean": "gatsby clean",
     "predeploy": "gatsby build",
     "deploy": "gh-pages -b gh-pages -d public",
+    "dev": "yarn develop",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
