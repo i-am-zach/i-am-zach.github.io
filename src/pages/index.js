@@ -53,16 +53,6 @@ export default function Home({ data }) {
           </div>
         </div>
       </section>
-      <section className="container" id="projects">
-        <div className="lead">Projects</div>
-        <div className="sublead">Check out what I've done</div>
-        <div className="wrapper">
-          {projects.map(project => (
-            <Project project={project} key={project.id} />
-          ))}
-        </div>
-      </section>
-      <div className="divider"></div>
       <section id="skills">
         <div className="container">
           <div className="lead">Skills</div>
@@ -70,6 +60,18 @@ export default function Home({ data }) {
           <div className="skills">
             {data.allLanguagesYaml.nodes.map(({ language }) => (
               <Skill language={language} />
+            ))}
+          </div>
+        </div>
+      </section>
+      <div className="divider"></div>
+      <section id="projects">
+        <div className="container">
+          <div className="lead">Projects</div>
+          <div className="sublead">Check out what I've done</div>
+          <div className="wrapper">
+            {projects.map(project => (
+              <Project project={project} key={project.id} />
             ))}
           </div>
         </div>

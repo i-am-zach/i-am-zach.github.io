@@ -149,11 +149,11 @@ ul {
   padding-bottom: 2rem;
 }
 
-section#projects {
+section#skills {
   padding-bottom: 1rem;
 }
 
-section#skills {
+section#projects {
   position: relative;
   background: var(--background);
   padding-top: 1rem;
@@ -163,7 +163,7 @@ section#skills {
   padding-bottom: 5rem;
 }
 
-section#skills::before {
+section#projects::before {
   position: absolute;
   content: "";
   top: -5rem;
@@ -236,7 +236,7 @@ section#contact {
     font-size: 30px;
   }
 
-  section#skills {
-    clip-path: polygon(100% 0%, 100% 94%, 50% 100%, 0% 94%, 0% 0%);
+  section#projects {
+    clip-path: polygon(100% 0%, 100% 97%, 50% 100%, 0% 97%, 0% 0%);
   }
 }
