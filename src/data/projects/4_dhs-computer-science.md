@@ -8,7 +8,7 @@ title: DHS Computer Science
 picture: ../../images/dhs_cs.JPG
 url: http://www.dhscs.org
 githubUrl: https://github.com/i-am-zach/dhs-comp-sci
-order: 1
+order: 4
 ---
 A statically generated Nuxt.js website made for my high school’s computer science department.
 
