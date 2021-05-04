@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>{{ block "title" . }}
-      {{ .Site.Title }}
-    {{ end }}</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
+
     {{ $css := resources.Get "css/main.css" }}
     {{ $style := $css | resources.PostCSS }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    <link rel="stylesheet" href="css/globals.css">
+
+    {{ block "head" . }} {{ end }}
   </head>
   <body>
-    <!-- Code that all your templates share, like a header -->
     {{ block "main" . }}
-      <!-- The part of the page that begins to differ between templates -->
+
     {{ end }}
+
     {{ block "footer" . }}
-    <!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
+
     {{ end }}
   </body>
 </html>

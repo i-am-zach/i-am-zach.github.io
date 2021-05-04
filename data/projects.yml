@@ -1,0 +1,18 @@
+- 
+  title: "UIUC Grade Statistics"
+  description: "My basic description"
+  img: /img/uiuc-course-stats-thumbnail.jpg
+  link: "https://uiuc-course-stats.vercel.app/"
+  githubUrl: "https://github.com/i-am-zach/uiuc-grade-stats"
+-
+  title: "Coding for a Cause"
+  description: "My other description"
+  img: /img/cfc_landing.jpg
+  link: "https://codingforacause.netlify.app/"
+  githubUrl: "https://github.com/i-am-zach/Coding-For-A-Cause-V2"
+-
+  title: "Physics Voltage Lab"
+  description: "My physics description"
+  img: /img/voltage-lab.png
+  link: "https://dhs-voltage-lab.herokuapp.com/"
+  githubUrl: "https://github.com/i-am-zach/Physics-Voltage-Lab"

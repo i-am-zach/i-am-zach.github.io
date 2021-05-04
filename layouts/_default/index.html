@@ -1,5 +1,39 @@
+{{ define "head" }}
+<link rel="stylesheet" href="css/home.css" />
+{{ end }} 
+
 {{ define "main" }}
-<main>
-    <h1 class="text-3xl font-bold">Hello world!</h1>
-</main>
+<div id="vanta">
+  <section class="pt-8">
+    <img class="profile--img shadow-lg" src="img/profile.png" alt="Profile" />
+    <h1 class="pt-2 text-center text-4xl text-white font-bold">
+      Zach Lefkovitz
+    </h1>
+  </section>
+  
+  <section class="text-white pt-8">
+    <div class="px-5 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {{ range $.Site.Data.projects }}
+          {{ partial "project.html" . }}
+      {{ end }}
+    </div>
+  </section>
+</div>
+{{ end }} 
+
+{{ define "footer" }}
+<script src="/js/three.min.js"></script>
+<script src="/js/vanta.net.min.js"></script>
+<script>
+  VANTA.NET({
+    el: '#vanta',
+    mouseControls: false,
+    touchControls: false,
+    gyroControls: false,
+    minHeight: 200.0,
+    minWidth: 200.0,
+    scale: 1.0,
+    scaleMobile: 1.0,
+  });
+</script>
 {{ end }}

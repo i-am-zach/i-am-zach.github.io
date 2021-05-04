@@ -1,12 +1,3 @@
-### Hugo ###
-# Generated files by hugo
-/public/
-/resources/_gen/
-
-/node_modules/
-
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+/resourses
+/node_modules
+/public
