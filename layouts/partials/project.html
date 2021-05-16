@@ -1,12 +1,12 @@
 <div class="card">
   <img src="{{ .img }}" class="card--img" />
-  <div class="card--body text-yellow-100 text-center flex justify-center items-center">
+  <div class="card--body text-white text-center flex justify-center items-center">
     <div>
       <h1 class="text-xl md:text-3xl font-bold">{{ .title }}</h1>
       <h3 class="pt-1 md:text-lg">{{ .description | markdownify  }}</h3>
-      <div class="absolute bottom-0 left-0 right-0 pb-2 md:pb-4 flex w-full items-center justify-center gap-4">
-        <a href="{{ .link }}" class="btn btn--outline text-sm border-yellow-100">Link</a>
-        <a href="{{ .githubUrl }}" class="btn btn--outline text-sm border-yellow-100">Github</a>
+      <div class="absolute bottom-0 left-0 right-0 pb-3 md:pb-4 flex w-full items-center justify-center gap-4">
+        <a href="{{ .link }}" class="btn btn--outline text-sm border-white">Link</a>
+        <a href="{{ .githubUrl }}" class="btn btn--outline text-sm border-white">Github</a>
       </div>
     </div>
   </div>

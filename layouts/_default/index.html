@@ -9,6 +9,14 @@
     <h1 class="pt-2 text-center text-4xl text-white font-bold">
       Zach Lefkovitz
     </h1>
+    <div class="mx-5 w-full bg-white" style="height: 1px;"></div>
+    <div class="flex justify-center items-center gap-3 text-lg text-white font-medium">
+      {{ range $.Site.Data.links }}
+        <span class="">
+          <a href="{{ .link }}">{{ .title }}</a>
+        </span>
+      {{ end }}
+    </div>
   </section>
   
   <section class="text-white pt-8">
