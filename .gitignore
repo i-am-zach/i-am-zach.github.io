@@ -8,6 +8,10 @@ hugo.exe
 hugo.darwin
 hugo.linux
 
+### GH Pages Config Keys ###
+gh-pages
+gh-pages.pub
+
 ### Code ###
 .vscode/*
 !.vscode/settings.json
