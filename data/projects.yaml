@@ -4,7 +4,7 @@
     - D3
     - Plotly
     - Chakra UI
-  title: UIUC Course Stats
+  title: UIUC Course Statistics
   imageUrl: /images/uiuc-course-stats-thumbnail.JPG
   url: https://uiuc-course-stats.vercel.app/
   githubUrl: https://github.com/i-am-zach/uiuc-grade-stats

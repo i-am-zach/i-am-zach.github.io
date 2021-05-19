@@ -21,7 +21,12 @@
     </section>
 
     <section class="skills" id="skills">
-      <div class="section-title">Skills</div>
+      <h1 class="section-title">Skills</h1>
+      <div class="skills-layout">
+        {{ range $.Site.Data.skills }}
+          {{ partial "skill.html" . }}
+        {{ end }}
+      </div>
     </section>
   </main>
 {{ end }}

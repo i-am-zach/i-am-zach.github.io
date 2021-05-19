@@ -1,5 +1,4 @@
--
-  name: Python
+- name: Python
   skills:
     - name: Django
       image: /images/skills/django.png
@@ -10,46 +9,29 @@
     - name: TensorFlow
       image: /images/skills/tensorflow.png
       learning: true
--
-  name: JavaScript
+- name: JavaScript
   skills:
     - name: Node
       image: /images/skills/node.png
+    - name: TypeScript
+      image: /images/skills/typescript.png
     - name: Vue
       image: /images/skills/vue.png
     - name: React
       image: /images/skills/react.png
+    - name: Svelte
+      image: /images/skills/svelte.png
     - name: Express
       image: /images/skills/express.png
     - name: Nuxt
       image: /images/skills/nuxt.png
     - name: Next
       image: /images/skills/next.png
--
-  name: Other
-  skills:
-    - name: Java + Javax Swing
-      image: /images/skills/java.png
-    - name: Rust
-      image: /images/skills/rust.png
-      learning: true
-    - name: Blender
-      image: /images/skills/blender.png
-      learning: true
-    - name: Affinity Designer
-      image: /images/skills/affinity-designer.png
-    - name: Affinity Photo
-      image: /images/skills/affinity-photo.png
-      learning: true
--
-  name: Pen Testing
-  skills:
-    - name: Linux Commands
-      image: /images/skills/linux.png
-    - name: Burp Suite
-      image: /images/skills/burp.png
--
-  name: Cloud
+    - name: Apollo Graphql
+      image: /images/skills/apollo.png
+    - name: TypeORM
+      image: /images/skills/typeorm.png
+- name: Cloud
   skills:
     - name: Docker
       image: /images/skills/docker.png
@@ -61,3 +43,41 @@
       image: /images/skills/netlify.png
     - name: Heroku
       image: /images/skills/heroku.png
+
+- name: Databases
+  skills:
+    - name: PostgresQL
+      image: /images/skills/postgres.png
+    - name: MongoDB
+      image: /images/skills/mongo.png
+    - name: Firebase
+      image: /images/skills/firebase.png
+    - name: MySQL
+      image: /images/skills/mysql.png
+- name: Other
+  skills:
+    - name: GraphQL
+      image: /images/skills/graphql.png
+    - name: Java + Javax Swing
+      image: /images/skills/java.png
+    - name: Google Sheets
+      image: /images/skills/sheets.png
+    - name: Affinity Designer
+      image: /images/skills/affinity-designer.png
+    - name: Affinity Photo
+      image: /images/skills/affinity-photo.png
+- name: Pen Testing
+  skills:
+    - name: Linux Commands
+      image: /images/skills/linux.png
+    - name: Burp Suite
+      image: /images/skills/burp.png
+
+- name: Currently Learning / Interested In
+  skills:
+    - name: Elixir
+      image: /images/skills/elixir.png
+    - name: Rust
+      image: /images/skills/rust.png
+    - name: Blender
+      image: /images/skills/blender.png
