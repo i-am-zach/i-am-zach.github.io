@@ -1,0 +1,63 @@
+-
+  name: Python
+  skills:
+    - name: Django
+      image: /images/skills/django.png
+    - name: Flask
+      image: /images/skills/flask.png
+    - name: Pandas
+      image: /images/skills/pandas.png
+    - name: TensorFlow
+      image: /images/skills/tensorflow.png
+      learning: true
+-
+  name: JavaScript
+  skills:
+    - name: Node
+      image: /images/skills/node.png
+    - name: Vue
+      image: /images/skills/vue.png
+    - name: React
+      image: /images/skills/react.png
+    - name: Express
+      image: /images/skills/express.png
+    - name: Nuxt
+      image: /images/skills/nuxt.png
+    - name: Next
+      image: /images/skills/next.png
+-
+  name: Other
+  skills:
+    - name: Java + Javax Swing
+      image: /images/skills/java.png
+    - name: Rust
+      image: /images/skills/rust.png
+      learning: true
+    - name: Blender
+      image: /images/skills/blender.png
+      learning: true
+    - name: Affinity Designer
+      image: /images/skills/affinity-designer.png
+    - name: Affinity Photo
+      image: /images/skills/affinity-photo.png
+      learning: true
+-
+  name: Pen Testing
+  skills:
+    - name: Linux Commands
+      image: /images/skills/linux.png
+    - name: Burp Suite
+      image: /images/skills/burp.png
+-
+  name: Cloud
+  skills:
+    - name: Docker
+      image: /images/skills/docker.png
+    - name: AWS
+      image: /images/skills/aws.png
+    - name: Google Cloud
+      image: /images/skills/google-cloud.png
+    - name: Netlify
+      image: /images/skills/netlify.png
+    - name: Heroku
+      image: /images/skills/heroku.png

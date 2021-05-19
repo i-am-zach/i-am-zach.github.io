@@ -19,6 +19,8 @@ section {
     position: relative;
 }
 
+//* BUTTON STYLES 
+
 .btn {
     text-decoration: none;
     border-radius: 10px;
@@ -30,6 +32,12 @@ section {
     padding: 14px 24px 16px;
     cursor: pointer;
     transition: transform 100ms ease-out;
+
+    &.sm {
+        font-size: 12px;
+        padding: 8px 18px 6px;
+        border-radius: 8px;
+    }
 
     &.main {
         background: $text-color;
