@@ -12,6 +12,9 @@ hugo.linux
 gh-pages
 gh-pages.pub
 
+### Deploy helper bat file ###
+deploy.bat
+
 ### Code ###
 .vscode/*
 !.vscode/settings.json
