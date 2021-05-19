@@ -1,0 +1,23 @@
+{{ define "main" }}
+<main>
+    <section class="hero">
+      <div class="profile-img">
+        <img src="images/zach.png" alt="Zach Lefkovitz" />
+      </div>
+      <h1>Hey There 👋<br />I'm Zach</h1>
+      <div class="buttons">
+        <a href="/resume.pdf" target="__blank" class="btn main">View my resume</a>
+        <a href="/#projects" class="btn main outline">Check out my projects</a>
+      </div>
+    </section>
+  
+    <section class="projects with-ellipse" id="projects">
+      <div class="section-title">Projects</div>
+      <div class="project-grid">
+          {{ range $.Site.Data.projects }}
+            {{ partial "project.html" . }}
+          {{ end }}
+      </div>
+    </section>
+  </main>
+{{ end }}
