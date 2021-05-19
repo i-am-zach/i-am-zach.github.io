@@ -3,7 +3,7 @@
 </script>
 
 <div class="card">
-    <img class="img" src={project.imageUrl }>
+    <img class="img" src={project.imageUrl } alt={project.title }>
     <div class="title">{ project.title }</div>
     <div class="description">{ project.description }</div>
 </div>
