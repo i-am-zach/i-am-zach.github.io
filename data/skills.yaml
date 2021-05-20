@@ -23,10 +23,10 @@
       image: /images/skills/svelte.png
     - name: Express
       image: /images/skills/express.png
-    - name: Nuxt
-      image: /images/skills/nuxt.png
     - name: Next
       image: /images/skills/next.png
+    - name: Nuxt
+      image: /images/skills/nuxt.png
     - name: TailwindCSS
       image: /images/skills/tailwind.png
     - name: Apollo Graphql
