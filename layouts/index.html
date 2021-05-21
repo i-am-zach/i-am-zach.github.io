@@ -28,5 +28,15 @@
         {{ end }}
       </div>
     </section>
+
+    <section class="connect with-ellipse">
+      <h1 class="section-title">Connect With Me</h1>
+
+      <div class="connections">
+        {{ range $.Site.Data.connections }}
+          <a href="{{ .href }}">{{ .name }}</a>
+        {{ end }}
+      </div>
+    </section>
   </main>
 {{ end }}
