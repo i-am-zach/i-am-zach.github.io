@@ -44,12 +44,3 @@
   url: https://www.vinceasena.com/
   githubUrl: null
   description: A full-stack ecommerce website that sells beats. Gatsby and Tailwind on the frontend and Django Rest Framework for a products API on the backend. Deployed to Netlify and AWS.
-
--
-  tags:
-    - Consulting
-    - Innovation
-    - Entrepreneurship 
-  title: PEV Solar Powered Charging Hubs
-  imageUrl: /images/PEV.png
-  description: Project developed during my QUEST Honors 190H class. Worked in a multidisciplinary team to go through the quality design process of creating a sustainable product that has a small change with large impact. Our team created a solar powered personal electric vehicle (PEV) charging hub to be placed on college campuses. Our team ideated, “rethinked” our solution, calculated financial analysis, pitched our product in a presentation, and created a design proposal for the product. Learned the valuable skills of design thinking, teamwork, project management, and collaborating in a multidisciplinary team.
