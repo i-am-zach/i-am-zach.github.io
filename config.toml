@@ -1,3 +1,23 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://i-am-zach.github.io/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Zach Lefkovitz'
+theme = 'digitalgarden'
+
+[menu]
+[[menu.main]]
+    name = 'Home'
+    url = '/'
+    weight = 1
+[[menu.main]]
+    name = 'Articles'
+    url = '/articles'
+    weight = 2
+[[menu.main]]
+    name = 'Projects'
+    url = '/projects'
+    weight = 3
+
+[[menu.social]]
+    name = 'Twitter'
+    url = 'https://twitter.com'
+    weight = 1
