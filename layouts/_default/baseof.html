@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    {{ $tw := resources.Get "css/output.css" }}
+    <link rel="stylesheet" href="{{ $tw.Permalink }}">
+</head>
+<body class="bg-black text-white">
+    {{ block "main" . }} {{ end }}
+    {{ $particles := resources.Get "js/particles.min.js" }}
+    {{ $app_js := resources.Get "js/app.js" }}
+    <script src="{{ $particles.Permalink }}"></script>
+    <script src="{{ $app_js.Permalink }}"></script>
+</body>
+</html>

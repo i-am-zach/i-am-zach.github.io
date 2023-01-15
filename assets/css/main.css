@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#dev,
+#creative,
+#umd {
+    white-space: nowrap;
+}
+
+
+#dev {
+    background: -webkit-linear-gradient(left, rgb(116, 108, 233), rgb(170, 97, 182));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#umd {
+    background: -webkit-linear-gradient(left, rgb(255, 0, 0), rgb(255, 225, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#creative {
+    background: -webkit-linear-gradient(left, rgb(129, 202, 255), rgb(124, 240, 99));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

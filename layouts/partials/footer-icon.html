@@ -1,0 +1,6 @@
+{{ $src := resources.Get .src }}
+
+<a href="{{ .href }}" class="flex flex-col items-center gap-2">
+    <img class="w-[32px] h-[32px]" src="{{ $src.Permalink }}" alt="{{ .alt }}">
+    <div>{{ .label }}</div>
+</a>

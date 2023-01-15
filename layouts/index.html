@@ -1,12 +1,17 @@
 {{ define "main" }}
 <main class="w-full h-full bg-black">
-  <div id="particles-js" style="height: 100%; width: 100%"></div>
-
-  {{ with resources.Get "img/zach-bkn.jpeg" }}
-  <img src="{{ .Permalink }}" alt="me" />
+  <div id="particles-js" class="fixed w-full h-[100vh]"></div>
+  <div class="flex flex-col w-full h-[90vh] justify-center items-center">
+    <div class="w-[80%] max-w-[350px]">
+      {{ partial "profile.html" (dict "context" . "class" "w-full rounded-[12px]") }}
+    </div>
+    <div class="text-center pt-6 px-4">
+      <h1 class="text-5xl">Zach Lefkovitz</h1>
+      <h3 class="text-xl pt-2"><span id="dev">Developer</span> - <span id="umd">University of Maryland</span> - <span id="creative">Creative</span></span></h3>
+    </div>
+  </div>
 </main>
-{{ end }} {{ with resources.Get "js/particles.min.js" }}
-<script src="{{ .Permalink }}"></script>
-{{ end }} {{ with resources.Get "js/app.js" }}
-<script src="{{ .Permalink }}"></script>
-{{ end }} {{ end }}
+<footer class="fixed bottom-0 w-full flex flex-row justify-center pb-4 z-50">
+  {{ partial "footer.html" . }}
+</footer>
+{{ end }}

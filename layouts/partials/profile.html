@@ -1,0 +1,5 @@
+{{ $className := .class }}
+{{ with resources.Get "img/zach-bkn.jpeg" }}
+    <img src="{{ .Permalink }}" class="{{ $className }}" alt="me" />
+{{ end }}
+
