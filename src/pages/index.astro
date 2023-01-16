@@ -1,7 +1,50 @@
 ---
-import SiteLayout from '../layouts/SiteLayout.astro';
+import SiteLayout from "../layouts/SiteLayout.astro";
 ---
 
 <SiteLayout>
-	<h1>Home Page</h1>
+  <main>
+    <div class="absolute inset-0" id="particles-js"></div>
+    <div class="pt-[100px] z-10">
+      <div
+        class="flex flex-col max-w-[70%] mx-auto lg:px-12 lg:max-w-none lg:flex-row items-center"
+      >
+        <img id="zach-img" src="/zach-bkn-square.jpeg" alt="Me!" />
+        <div class="lg:ml-12">
+          <h1 class="pt-8 font-bold text-4xl lg:text-6xl">Zach Lefkovitz</h1>
+          <h3 class="pt-2 text-slate-200 text-xl lg:pt-4 lg:text-3xl">
+            Software Developer - Cloud Architect - Technology Innovator -
+            Student
+          </h3>
+        </div>
+      </div>
+    </div>
+    <img id="mars" src="/img/mars-top.png" alt="Mars" />
+  </main>
 </SiteLayout>
+
+<style>
+  #zach-img {
+    border-radius: 12px;
+    transform: rotate(-3.75deg);
+    max-width: min(375px, 85vw);
+  }
+
+  #mars {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+	bottom: 0px;
+    margin: 0 auto;
+  }
+</style>
+
+<script is:inline src="/js/particles.min.js"></script>
+<script is:inline>
+  particlesJS.load("particles-js", "/js/particles.json", function () {
+    console.log("callback - particles.js config loaded");
+  });
+
+  const bodyElem = document.getElementsByTagName("body")[0];
+  bodyElem.style.overflow = 'hidden';
+</script>
