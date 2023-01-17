@@ -1,0 +1,37 @@
+---
+import Footer from "../components/Footer.astro";
+import SiteLayout from "./SiteLayout.astro";
+
+export interface Props {
+  content: {
+    title: string;
+    description: string;
+    pubDate?: string;
+    updatedDate?: string;
+    heroImage?: string;
+  };
+}
+
+const {
+  content: { title, description, pubDate, updatedDate, heroImage },
+} = Astro.props;
+---
+
+<SiteLayout title={title} description={description}>
+    <article class="prose container mx-auto px-2 lg:px-0">
+      {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
+      <h1 class="title">{title}</h1>
+      <p class="text-slate-300 italic">{ description }</p>
+      {pubDate && <time>{pubDate}</time>}
+      {
+        updatedDate && (
+          <div>
+            Last updated on <time>{updatedDate}</time>
+          </div>
+        )
+      }
+      <hr />
+      <slot />
+    </article>
+  <Footer />
+</SiteLayout>
