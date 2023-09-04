@@ -13,9 +13,11 @@ import SiteLayout from "../layouts/SiteLayout.astro";
         <div class="lg:ml-12 z-20">
           <h1 class="pt-8 font-bold text-4xl lg:text-6xl">Zach Lefkovitz</h1>
           <h3 class="pt-2 text-slate-200 text-xl lg:pt-4 lg:text-3xl">
-            Software Developer - Cloud Architect - Technology Innovator -
-            Student
+            Software Dev • Tech Innovator • Cloud Specialist • Dedicated Student
           </h3>
+          <a href='/about' class="inline-block mt-6 rounded-sm bg-orange-800 text-white px-4 py-2"
+            >More about me</a
+          >
         </div>
       </div>
     </div>
@@ -41,10 +43,10 @@ import SiteLayout from "../layouts/SiteLayout.astro";
 
 <script is:inline src="/js/particles.min.js"></script>
 <script is:inline>
-  particlesJS.load("particles-js", "/js/particles.json", function () {
-    console.log("callback - particles.js config loaded");
-  });
+particlesJS.load("particles-js", "/js/particles.json", function () {
+  console.log("callback - particles.js config loaded");
+});
 
-  const bodyElem = document.getElementsByTagName("body")[0];
-  bodyElem.style.overflow = "hidden";
+const bodyElem = document.getElementsByTagName("body")[0];
+bodyElem.style.overflow = "hidden";
 </script>
