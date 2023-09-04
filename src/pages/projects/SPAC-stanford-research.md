@@ -2,8 +2,8 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Research for Stanford Law on the prevalence of the search term ‘SPAC.’"
 description: Analyzing Financial Memes Using Data Science
-pubDate: "Jan 16 2022"
-updatedDate: "Jan 16 2022"
+pubDate: "Sept 4 2023"
+updatedDate: "May 12 2023"
 heroImage: "/img/nyt-spac.png"
 draft: false
 ---
