@@ -5,6 +5,7 @@ description: "Rationalizing JavaScript frameworks, deploying static websites usi
 pubDate: "Jan 16 2022"
 updatedDate: "Jan 16 2022"
 heroImage: "/img/hindi88.png"
+draft: true
 ---
 
 Coming soon!
